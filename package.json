@@ -1,0 +1,22 @@
+{
+  "name": "yummly",
+  "version": "0.0.1",
+  "description": "Yummly API Module",
+  "homepage": "http://yummly.com",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yummly/node-yummly.git"
+  },
+
+  "main": "lib/api.js",
+  "engines": {
+    "node": "0.6.x",
+    "npm": "1.1.x"
+  },
+  "dependencies": {
+    "request": ""
+  },
+
+  "author": ["Jamie Hoover <jamie@yummly.com>"]
+}
