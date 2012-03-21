@@ -8,13 +8,17 @@ Yummly API Module for Node.js
       key: '********************************'
     }
 
-2.) Require the search/recipe modules.
+2.) Install Yummly module.
+
+    npm install yummly
+
+3.) Require the search/recipe modules.
 
     var
       search = require('yummly/search'),
       recipe = require('yummly/recipe');
 
-3.) Call search/recipe function and have fun with [Yummly's JSON object](http://developer.yummly.com/wiki)!
+4.) Call search/recipe function and have fun with [Yummly's JSON object](http://developer.yummly.com/wiki)!
 
 Search:
 
