@@ -1,5 +1,14 @@
 {
-  "predef": [],
+  "predef": [
+    "authentication",
+    "describe",
+    "before",
+    "it",
+    "expect",
+    "search",
+    "recipe"
+  ],
+  "jquery": true,
   "node": true,
   "es5": true,
   "bitwise": true,

@@ -2,21 +2,36 @@
   "name": "yummly",
   "version": "0.0.1",
   "description": "Yummly API Module",
-  "homepage": "http://yummly.com",
 
+  "homepage": "https://github.com/yummly/node-yummly/",
   "repository": {
     "type": "git",
     "url": "https://github.com/yummly/node-yummly.git"
   },
+  "bugs": {
+    "url" : "https://github.com/ninja/ui/issues/"
+  },
 
   "main": "lib/api.js",
   "engines": {
-    "node": "0.6.x",
-    "npm": "1.1.x"
+    "node": "0.6 || 0.7 || 0.8",
+    "npm": "1"
   },
   "dependencies": {
-    "request": ""
+    "request": "2.9.x"
   },
+  "devDependencies": {
+    "expect.js": "0.1.x",
+    "jshint": "0.5.x",
+    "mocha": "0.14.x"
+  },
+
+  "licenses": [
+    {
+      "type": "Apache 2",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+    }
+  ],
 
   "author": ["Jamie Hoover <jamie@yummly.com>"]
 }
