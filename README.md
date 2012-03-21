@@ -1,3 +1,2 @@
-Yummly API Module for Node.js
-=============================
-
+[Yummly API](http://developer.yummly.com/wiki) Module for Node.js
+-----------------------------------------------------------------
