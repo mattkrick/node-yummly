@@ -1,4 +1,4 @@
-[Yummly API](http://developer.yummly.com/wiki) Module for Node.js
+Yummly API Module for Node.js
 -----------------------------------------------------------------
 
 1.) Register an account at [http://developer.yummly.com/](http://developer.yummly.com/).
@@ -31,7 +31,7 @@ Search:
 
 Recipe:
 
-    search({
+    search({ // calling search first to get a recipe id
       authentication: authentication,
       query: 'pasta'
     }, function (error, response, json) {
