@@ -1,5 +1,4 @@
-Yummly API Module for Node.js
------------------------------------------------------------------
+##Yummly API Module for Node.js
 
 1.) Register an account at [http://developer.yummly.com/](http://developer.yummly.com/).
 
@@ -54,3 +53,20 @@ Recipe:
         });
       }
     });
+
+###Contributing
+
+1.) Fork then clone this repository.
+
+2.) Install development dependencies.
+
+    cd ~/node-yummly
+    npm install -d
+
+3.) Make changes.
+
+4.) Run unit tests.
+
+`make` runs all tests
+`make test-search` runs only search tests
+`make test-recipe` runs only recipe tests

@@ -2,13 +2,21 @@
 
 VERSION = $(shell node --print --eval "require('package.json').version")
 REPORTER = spec
-SLOW = 75
-TIMEOUT = 3000
+SLOW = 1000
+TIMEOUT = 0
+GREP = ''
 
 test:
-	@node_modules/.bin/mocha --colors --ui bdd --globals expect --require test --reporter $(REPORTER) --slow $(SLOW) --timeout $(TIMEOUT)
+	@echo "\n  Testing Yummly API"
+	@node_modules/.bin/mocha --colors --ui bdd --globals expect --require test --reporter $(REPORTER) --slow $(SLOW) --timeout $(TIMEOUT) --grep $(GREP)
+
+test-recipe:
+	@make test GREP=^recipe
+
+test-search:
+	@make test GREP=^search
 
 version:
 	@echo ${VERSION}
 
-.PHONY: test version
+.PHONY: test test-recipe test-search version

@@ -4,7 +4,7 @@ var yummly;
 
 describe('search', function () {
 
-  before(function (done) {
+  it('should be fast', function (done) {
     search({
       authentication: authentication,
       query: 'chicken'
