@@ -2,9 +2,7 @@
 
 global.expect = require('expect.js');
 
-global.search = require('lib/search');
-
-global.recipe = require('lib/recipe');
+global.yummly = require('lib/yummly');
 
 global.authentication = {
   id: '3cbb14d1',

@@ -5,8 +5,7 @@
     "before",
     "it",
     "expect",
-    "search",
-    "recipe"
+    "yummly"
   ],
   "jquery": true,
   "node": true,

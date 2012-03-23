@@ -1,25 +1,25 @@
 'use strict';
 
-var yummly;
+var search;
 
 describe('search', function () {
 
   it('should be fast', function (done) {
-    search({
+    yummly.search({
       authentication: authentication,
       query: 'chicken'
     }, function (error, response, json) {
       if (error) {
         console.error(error);
       } else if (response.statusCode === 200) {
-        yummly = json;
+        search = json;
         done();
       }
     });
   });
 
   it('should return 40 recipes', function () {
-    expect(yummly.matches.length).to.be(40);
+    expect(search.matches.length).to.be(40);
   });
 
 });
