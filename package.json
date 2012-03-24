@@ -1,6 +1,6 @@
 {
   "name": "yummly",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Yummly API Module",
 
   "homepage": "https://github.com/yummly/node-yummly/",
@@ -16,9 +16,6 @@
   "engines": {
     "node": "0.6 || 0.7 || 0.8",
     "npm": "1"
-  },
-  "dependencies": {
-    "request": "2.9.x"
   },
   "devDependencies": {
     "expect.js": "0.1.x",

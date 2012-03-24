@@ -2,7 +2,7 @@
 
 1.) Register an account at [http://developer.yummly.com/](http://developer.yummly.com/).
 
-    var authentication = {
+    var credentials = {
       id: '********',
       key: '********************************'
     }
@@ -20,8 +20,10 @@
 Search:
 
     yummly.search({
-      authentication: authentication,
-      query: 'chicken'
+      credentials: credentials,
+      query: {
+        q: 'chicken'
+      }
     }, function (error, response, json) {
       if (error) {
         console.error(error);
@@ -33,14 +35,16 @@ Search:
 Recipe:
 
     yummly.search({ // calling search first to get a recipe id
-      authentication: authentication,
-      query: 'pasta'
+      credentials: credentials,
+      query: {
+        q: 'pasta'
+      }
     }, function (error, response, json) {
       if (error) {
         console.error(error);
       } else if (response.statusCode === 200) {
         yummly.recipe({
-          authentication: authentication,
+          credentials: credentials,
           id: json.matches[0].id // id of the first recipe returned by search
         }, function (error, response, json) {
           if (error) {
@@ -68,3 +72,5 @@ Recipe:
 `make` runs all tests
 `make test-search` runs only search tests
 `make test-recipe` runs only recipe tests
+
+5.) Send a pull request.

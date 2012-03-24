@@ -6,7 +6,7 @@ describe('recipe', function () {
 
   it('should be fast', function (done) {
     yummly.recipe({
-      authentication: authentication,
+      credentials: credentials,
       id: 'Meyer-Lemon-Semifreddo-With-Summer-Berries-Epicurious'
     }, function (error, response, json) {
       if (error) {

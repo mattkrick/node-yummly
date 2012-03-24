@@ -6,12 +6,14 @@ describe('search', function () {
 
   it('should be fast', function (done) {
     yummly.search({
-      authentication: authentication,
-      query: 'chicken'
-    }, function (error, response, json) {
+      credentials: credentials,
+      query: {
+        q: 'chicken'
+      }
+    }, function (error, statusCode, json) {
       if (error) {
         console.error(error);
-      } else if (response.statusCode === 200) {
+      } else if (statusCode === 200) {
         search = json;
         done();
       }
@@ -20,6 +22,11 @@ describe('search', function () {
 
   it('should return 40 recipes', function () {
     expect(search.matches.length).to.be(40);
+  });
+
+  it('should return recipe names', function () {
+    expect(search.matches[0].recipeName).to.be.ok();
+    console.log(search.matches[0].recipeName);
   });
 
 });
