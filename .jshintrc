@@ -1,6 +1,6 @@
 {
   "predef": [
-    "authentication",
+    "credentials",
     "describe",
     "before",
     "it",
