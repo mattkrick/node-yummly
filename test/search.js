@@ -20,8 +20,8 @@ describe('search', function () {
     });
   });
 
-  it('should return 40 recipes', function () {
-    expect(search.matches.length).to.be(40);
+  it('should return 10 recipes', function () {
+    expect(search.matches.length).to.be(10);
   });
 
   it('should return recipe names', function () {

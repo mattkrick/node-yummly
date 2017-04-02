@@ -36,7 +36,7 @@ describe('recipe', function () {
 
   it('should have calories', function () {
     expect(recipe.nutritionEstimates).to.be.an(Array);
-    expect(recipe.nutritionEstimates[0].attribute).to.equal('ENERC_KCAL');
+    expect(recipe.nutritionEstimates[0].attribute).to.equal('FAT_KCAL');
     console.log(recipe.nutritionEstimates[0].unit.plural + ':', recipe.nutritionEstimates[0].value);
   });
 

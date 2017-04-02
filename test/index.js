@@ -2,7 +2,7 @@
 
 global.expect = require('expect.js');
 
-global.yummly = require('lib/yummly');
+global.yummly = require('../lib/yummly');
 
 global.credentials = {
   id: '3cbb14d1',
