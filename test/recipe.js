@@ -54,4 +54,15 @@ describe('recipe', function () {
     console.log(recipe.images[0].hostedLargeUrl);
   });
 
+  it('should handle errors', function (done) {
+    yummly.recipe({
+      credentials: credentials,
+      id: 'Some-Missing-Recipe'
+    }, function (error, response, json) {
+      var expected = { error: 'No such recipe: Some-Missing-Recipe' };
+      expect(json).to.eql(expected);
+      done();
+    });
+  });
+
 });
