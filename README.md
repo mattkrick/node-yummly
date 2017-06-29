@@ -24,10 +24,10 @@ Search:
       query: {
         q: 'chicken'
       }
-    }, function (error, response, json) {
+    }, function (error, statusCode, json) {
       if (error) {
         console.error(error);
-      } else if (response.statusCode === 200) {
+      } else if (statusCode === 200) {
         console.log(json);
       }
     });
@@ -39,14 +39,14 @@ Recipe:
       query: {
         q: 'pasta'
       }
-    }, function (error, response, json) {
+    }, function (error, statusCode, json) {
       if (error) {
         console.error(error);
-      } else if (response.statusCode === 200) {
+      } else if (statusCode === 200) {
         yummly.recipe({
           credentials: credentials,
           id: json.matches[0].id // id of the first recipe returned by search
-        }, function (error, response, json) {
+        }, function (error, statusCode, json) {
           if (error) {
             console.error(error);
           } else {

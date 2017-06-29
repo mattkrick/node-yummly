@@ -36,7 +36,7 @@ describe('recipe', function () {
 
   it('should have calories', function () {
     expect(recipe.nutritionEstimates).to.be.an(Array);
-    expect(recipe.nutritionEstimates[0].attribute).to.equal('ENERC_KCAL');
+    expect(recipe.nutritionEstimates[0].attribute).to.equal('FAT_KCAL');
     console.log(recipe.nutritionEstimates[0].unit.plural + ':', recipe.nutritionEstimates[0].value);
   });
 
@@ -52,6 +52,17 @@ describe('recipe', function () {
   it('should have a large image', function () {
     expect(recipe.images[0].hostedLargeUrl).to.be.ok();
     console.log(recipe.images[0].hostedLargeUrl);
+  });
+
+  it('should handle errors', function (done) {
+    yummly.recipe({
+      credentials: credentials,
+      id: 'Some-Missing-Recipe'
+    }, function (error, response, json) {
+      var expected = { error: 'No such recipe: Some-Missing-Recipe' };
+      expect(json).to.eql(expected);
+      done();
+    });
   });
 
 });

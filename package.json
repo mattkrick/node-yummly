@@ -18,9 +18,10 @@
     "npm": "1"
   },
   "devDependencies": {
-    "expect.js": "0.1.x",
-    "jshint": "0.5.x",
-    "mocha": "0.14.x"
+    "dotenv": "^4.0.0",
+    "expect.js": "^0.3.1",
+    "jshint": "^2.9.4",
+    "mocha": "^3.2.0"
   },
 
   "licenses": [
