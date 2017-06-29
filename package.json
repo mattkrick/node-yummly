@@ -14,8 +14,7 @@
 
   "main": "./lib/yummly.js",
   "engines": {
-    "node": "0.6 || 0.7 || 0.8",
-    "npm": "1"
+    "node": ">=0.6"
   },
   "devDependencies": {
     "dotenv": "^4.0.0",
